@@ -2,7 +2,7 @@
 Is a library that helps you to easily search for tweets by their Twitter hashtag (#)
 # Download
 Maven:
-```sh
+```java
 <dependency>
   <groupId>com.tarekhoury.android</groupId>
   <artifactId>hashtag-finder</artifactId>
@@ -10,7 +10,22 @@ Maven:
   <type>pom</type>
 </dependency>
 ```
+
 Or Gradle:
-```sh
+
+```java
 compile 'com.tarekhoury.android:hashtag-finder:1.1'
+```
+# Usage
+
+```java
+HashFinder finder = new HashFinder(
+                TWITTER_CONSUMER_KEY,
+                TWITTER_CONSUMER_SECRET,
+                TWITTER_ACCESS_TOKEN,
+                TWITTER_ACCESS_TOKEN_SECRET);
+// Count must be in 1-100 Range
+finder.setTweetsCount(count);
+// Valid hashtag like #facebook (no spaces)
+List<SimpleTweet> tweets = finder.search(hashtag);
 ```
