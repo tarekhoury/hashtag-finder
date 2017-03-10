@@ -87,6 +87,9 @@ public class HashFinder {
 
                 e.printStackTrace();
             }
+        } else {
+
+            Log.w(TAG, "Invalid hashtag, skipping search");
         }
 
         return null;
