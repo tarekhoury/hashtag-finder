@@ -1,19 +1,9 @@
-plugins {
-    id "com.jfrog.bintray" version "1.7.3"
-}
-
 apply plugin: 'com.android.library'
 
-bintray {
-    user = 'tarekhoury'
-    key = 'f0817be13cbe7f17b3d5c0aa859cee76a7451cf6'
-    pkg {
-        repo = 'maven'
-        name = 'gradle-project'
-        userOrg = 'bintray_user'
-        licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/bintray/gradle-bintray-plugin.git'
-    }
+ext {
+    PUBLISH_GROUP_ID = 'com.tarekhoury.android'
+    PUBLISH_ARTIFACT_ID = 'hashtag-finder'
+    PUBLISH_VERSION = '1.1'
 }
 
 android {
@@ -24,7 +14,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "1.1"
     }
     buildTypes {
         release {
@@ -39,5 +29,6 @@ dependencies {
 
     compile 'com.android.support:support-annotations:25.2.0'
     compile 'org.twitter4j:twitter4j-core:4.0.4'
-    testCompile "org.mockito:mockito-core:2.7.14"
 }
+
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
