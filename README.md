@@ -24,8 +24,10 @@ HashFinder finder = new HashFinder(
                 TWITTER_CONSUMER_SECRET,
                 TWITTER_ACCESS_TOKEN,
                 TWITTER_ACCESS_TOKEN_SECRET);
-// Count must be in 1-100 Range
+                
+// Count must be in the 1-100 range
 finder.setTweetsCount(count);
+
 // Valid hashtag like #facebook (no spaces)
 List<SimpleTweet> tweets = finder.search(hashtag);
 ```
