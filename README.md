@@ -6,11 +6,11 @@ Maven:
 <dependency>
   <groupId>com.tarekhoury.android</groupId>
   <artifactId>hashtag-finder</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
   <type>pom</type>
 </dependency>
 ```
 Or Gradle:
 ```sh
-compile 'com.tarekhoury.android:hashtag-finder:1.0'
+compile 'com.tarekhoury.android:hashtag-finder:1.1'
 ```
